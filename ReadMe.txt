@@ -1,5 +1,3 @@
-heroku
-
 > mkdir deployments
 > cd deployments
 > mkdir heroku
