@@ -15,7 +15,7 @@ SECRET_KEY = 'mde6=sig-8ts0s-(gsg2^k(02_(2$p*^hi-g9@pglb2__hr$u)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['testing-mustafa.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','testing-mustafa.herokuapp.com']
 
 
 # Application definition
@@ -108,7 +108,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/staticfiles/'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),    #'/var/www/static/oasis/',
+]
+
 django_heroku.settings(locals())
 try:
     from mysite.local_settings import *
